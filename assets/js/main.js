@@ -54,3 +54,21 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+/*===== Toggle theme =====*/
+
+const toggleTheme = document.getElementById('toggle-theme');
+const body = document.querySelector('body');
+
+toggleTheme.addEventListener('click', () => {
+    if(body.classList.contains('light')) {
+        body.classList.remove('light');
+        body.classList.add('dark');
+        toggleTheme.className = 'bx bx-sun'
+        return;
+    }
+
+    body.classList.remove('dark');
+    body.classList.add('light');
+    toggleTheme.className = 'bx bx-moon'
+}) 

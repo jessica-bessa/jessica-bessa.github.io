@@ -1,6 +1,8 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 /*===== VARIABLES CSS =====*/
+
+
 :root {
   --header-height: 3rem;
   --font-semi: 600;
@@ -24,6 +26,26 @@
   /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
+
+
+  --toggle-theme-color: #779bfd;
+}
+
+.light {
+  --body-background: white;
+  --body-icons-color: blue;
+  --footer-icons-color: white;
+  --text-color: #779bfd;
+  --primary-title-color: black;
+
+}
+
+.dark {
+  --body-background: black;
+  --body-icons-color: blue;
+  --footer-icons-color: white;
+  --text-color: #779bfd;
+  --primary-title-color: white;
 }
 
 @media screen and (min-width: 968px) {
@@ -48,11 +70,15 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  color: var(--second-color);
+  background-color: var(--body-background);
 }
 
 h1, h2, p {
   margin: 0;
+}
+
+h1, h2, p {
+  color: var(--primary-title-color);
 }
 
 ul {
@@ -112,8 +138,8 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  background-color: var(--body-background);
+  box-shadow: 0 1px 4px rgb(62 111 244);
 }
 
 /*===== NAV =====*/
@@ -144,7 +170,7 @@ img {
 
 .nav__link {
   position: relative;
-  color: #fff;
+  color: var(--text-color);
 }
 
 .nav__link:hover {
@@ -162,11 +188,11 @@ img {
 }
 
 .nav__logo {
-  color: var(--second-color);
+  color: var(--text-color);
 }
 
 .nav__toggle {
-  color: var(--second-color);
+  color: var(--text-color);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -232,7 +258,7 @@ img {
 }
 
 .home__blob {
-  fill: #fff;
+  fill: var(--body-background);
 }
 
 .home__blob-img {
@@ -297,7 +323,8 @@ img {
   padding: .5rem 1rem;
   margin-bottom: var(--mb-4);
   border-radius: .5rem;
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  color: var(--primary-title-color);
+  box-shadow: 0px 4px 25px rgb(62 111 244);
 }
 
 .skills__icon {
@@ -393,7 +420,7 @@ img {
 .footer__title {
   font-size: 2rem;
   margin-bottom: var(--mb-4);
-  color: #fff;
+  color: var(--text-color);
 }
 
 .footer__social {
@@ -402,7 +429,7 @@ img {
 
 .footer__icon {
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--footer-icons-color);
   margin: 0 var(--mb-2);
 }
 
@@ -411,8 +438,18 @@ img {
 }
 
 .bx {
-  font-size: 3rem;
+  font-size: 2rem;
+  color: var(--body-icons-color);
+  border: 1px solid #3e6ff4;
+  border-radius: 15%;
+  padding: 0.2rem;
 }
+
+#toggle-theme {
+  color: var(--toggle-theme-color);
+}
+
+
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
@@ -496,7 +533,7 @@ img {
     display: none;
   }
   .nav__link {
-    color: var(--second-color);
+    color: var(--text-color);
   }
   .home {
     padding: 8rem 0 2rem;
