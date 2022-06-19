@@ -37,6 +37,7 @@
   --footer-icons-color: white;
   --text-color: #779bfd;
   --primary-title-color: black;
+  --toggle-theme-hover-color: #000;
 
 }
 
@@ -46,6 +47,7 @@
   --footer-icons-color: white;
   --text-color: #779bfd;
   --primary-title-color: white;
+  --toggle-theme-hover-color: #fff;
 }
 
 @media screen and (min-width: 968px) {
@@ -433,23 +435,34 @@ img {
   margin: 0 var(--mb-2);
 }
 
+.footer__icon i{
+  color: #fff;
+}
+
 .footer__copy {
   font-size: var(--smaller-font-size);
+  color: #fff;
 }
 
 .bx {
   font-size: 2rem;
-  color: var(--body-icons-color);
+  color: #3e6ff4;
   border: 1px solid #3e6ff4;
   border-radius: 15%;
-  padding: 0.2rem;
+  padding: 0.1rem;
+}
+
+.bx:hover {
+  transform: scale(1.1);
 }
 
 #toggle-theme {
   color: var(--toggle-theme-color);
 }
 
-
+#toggle-theme:hover {
+  background-color: var(--toggle-theme-hover-color);
+}
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
