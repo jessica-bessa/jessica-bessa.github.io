@@ -73,6 +73,11 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-background);
+  scrollbar-width: none; 
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1, h2, p {
@@ -463,6 +468,8 @@ img {
 #toggle-theme:hover {
   background-color: var(--toggle-theme-hover-color);
 }
+
+
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
