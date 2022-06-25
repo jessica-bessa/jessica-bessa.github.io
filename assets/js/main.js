@@ -63,7 +63,7 @@ const sr = ScrollReveal({
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text', {});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img', { delay: 400 });
 sr.reveal('.home__social-icon', { interval: 200 });
-sr.reveal('.skills__data, .work__img, .contact__input', { interval: 200 });
+sr.reveal('.skills__data, .work__img, .contact__input, .skills__list', { interval: 200 });
 
 /*===== Toggle theme =====*/
 
@@ -88,6 +88,7 @@ toggleTheme.addEventListener('click', () => {
   localStorage.setItem("theme", theme);
 })
 
+/*===== Skills =====*/
 
 class Skill {
   constructor(name, percentage) {
@@ -129,9 +130,9 @@ class Skill {
   }
 }
 
-let skills = [];
+let hardSkills = [];
 
-skills = skills.concat(
+hardSkills = hardSkills.concat(
   new Skill('BDD', '100%'),
   new Skill('Jira', '95%'),
   new Skill('Integration Test', '100%'),
@@ -152,17 +153,31 @@ skills = skills.concat(
   new Skill('Agile', '95%'),
   new Skill('ERP', '90%'),
   new Skill('Problem solving', '90%'),
-  new Skill('functional tests', '100%'),
-  new Skill('non-functional tests', '100%'),
-  new Skill('test management', '100%'),
+  new Skill('Functional tests', '100%'),
+  new Skill('Non-functional tests', '100%'),
+  new Skill('Test management', '100%'),
   new Skill('SAS', '60%')
-
 )
 
-const add_skills = (skills) => {
-  const skillsDatas = document.getElementById('skills__datas');
-  skills.forEach(skill => skillsDatas.appendChild(skill));
+let softSkills = [];
+softSkills = softSkills.concat(
+  new Skill('Comunication', '100%'),
+  new Skill('Creativity', '78%'),
+  new Skill('Collaboration', '90%'),
+  new Skill('Adaptability', '90%'),
+  new Skill('Leadership.', '87%'),
+  new Skill('Negotiation.', '64%'),
+  new Skill('General Management.', '80%'),
+  new Skill('Time Management.', '89%')
+)
+
+const add_skills = (hardSkills, softSkills) => {
+  const hardSkillsContainer = document.getElementById('skills__hard_list');
+  const softSkillsContainer = document.getElementById('skills__soft_list');
+
+  hardSkills.forEach(skill => hardSkillsContainer.appendChild(skill));
+  softSkills.forEach(skill => softSkillsContainer.appendChild(skill));
 }
 
 
-add_skills(skills);
+add_skills(hardSkills, softSkills);
