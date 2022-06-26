@@ -262,6 +262,11 @@ img {
   right: 0;
   bottom: 0;
   width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('../img/perfil-nobg.png');
 }
 
 .home__blob {
@@ -291,6 +296,7 @@ img {
 /* ===== ABOUT =====*/
 .about__container {
   row-gap: 2rem;
+  column-gap: 1rem;
   text-align: center;
 }
 
@@ -300,11 +306,11 @@ img {
 
 .about__img {
   justify-self: center;
-}
-
-.about__img img {
-  width: 200px;
-  border-radius: .5rem;
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  background-image: url("../img/about-nobg.png");
+  background-repeat: no-repeat;
 }
 
 /* ===== SKILLS =====*/
@@ -498,6 +504,10 @@ img {
   }
   .home__img {
     width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
@@ -516,8 +526,12 @@ img {
     margin-right: var(--mb-4);
   }
   .home__img {
+    bottom: -100px;
     width: 300px;
-    bottom: 25%;
+    height: 300px;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;    
   }
   .about__container {
     grid-template-columns: repeat(2, 1fr);
@@ -579,15 +593,17 @@ img {
     padding: 8rem 0 2rem;
   }
   .home__img {
-    width: 400px;
-    bottom: 10%;
+    bottom: -100px;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .about__container {
     padding-top: 2rem;
   }
-  .about__img img {
-    width: 300px;
-  }
+
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
@@ -610,5 +626,8 @@ img {
   }
   .home__img {
     width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-size: contain;
   }
 }

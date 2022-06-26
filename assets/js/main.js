@@ -67,8 +67,6 @@ sr.reveal('.skills__data, .work__img, .contact__input, .skills__list', { interva
 
 /*===== Toggle theme =====*/
 
-
-
 let theme;
 toggleTheme.addEventListener('click', () => {
   if (body.classList.contains('light')) {
